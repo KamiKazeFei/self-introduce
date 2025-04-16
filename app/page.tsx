@@ -71,8 +71,8 @@ export default function Portfolio() {
   // Skills data
   const skills = {
     frontend: [
-      { name: "Angular", level: 85 },
-      { name: "TypeScript", level: 80 },
+      { name: "Angular", level: 80 },
+      { name: "TypeScript", level: 75 },
       { name: "CSS/SCSS", level: 50 },
       { name: "Tailwind CSS", level: 30 },
     ],
@@ -80,7 +80,7 @@ export default function Portfolio() {
       { name: ".NET Core", level: 50 },
       { name: "Java Spring", level: 40 },
       { name: "Python", level: 30 },
-      { name: "RESTful APIs", level: 75 },
+      { name: "RESTful APIs", level: 60 },
     ],
     other: [
       { name: "Git/GitHub", level: 60 },
@@ -257,15 +257,16 @@ export default function Portfolio() {
             data-aos-delay="100"
           >
             <p className="mb-4 text-lg text-[#475569]">
-              Hi, I'm Yuul, a passionate software developer. So far, I’ve been
-              working as a web application developer, dedicating myself to each
-              project and gaining valuable experience and insights along the
-              way.
+            I'm Yuul, a Full End Developer with over 4 years of experience in the web application field. 
+            In addition to my expertise in frontend development, I am also keenly interested in exploring other programming languages such as Python, C# and Java.
             </p>
-            <p className="text-lg text-[#475569]">
-              I hope you can get to know me better through this space. If you’re
-              interested in any kind of collaboration, feel free to reach out to
-              me via email :)
+
+            <p className="mb-4 text-lg text-[#475569]">                          
+            I aslo have experience with backend development, including frameworks like .NET, Spring Boot, and Django, I am also skilled in SQL, which supports my capability to work across both frontend and backend development.            
+            </p>
+
+            <p className="mb-4 text-lg text-[#475569]">                                      
+            Currently, I am working on a new project focused on a vehicle renting system. This role has exposed me to various workflows and development methodologies. I am grateful for the opportunity to collaborate with such professional colleagues, as it has significantly contributed to my personal and professional growth.
             </p>
           </div>
         </div>
