@@ -391,7 +391,7 @@ export default function Portfolio() {
             className="text-2xl font-bold text-center mb-8 text-[#0F172A]"
             data-aos="fade-up"
           >
-            Technical Skills
+            {t("technical.title")}
           </h3>
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -402,7 +402,7 @@ export default function Portfolio() {
               data-aos-delay="100"
             >
               <h4 className="text-xl font-bold mb-4 text-[#0F172A]">
-                Frontend
+                {t("technical.frontend")}
               </h4>
               <div className="space-y-4">
                 {skills.frontend.map((skill, index) => (
@@ -428,7 +428,9 @@ export default function Portfolio() {
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <h4 className="text-xl font-bold mb-4 text-[#0F172A]">Backend</h4>
+              <h4 className="text-xl font-bold mb-4 text-[#0F172A]">
+                {t("technical.back")}
+              </h4>
               <div className="space-y-4">
                 {skills.backend.map((skill, index) => (
                   <div key={index}>
@@ -454,7 +456,7 @@ export default function Portfolio() {
               data-aos-delay="300"
             >
               <h4 className="text-xl font-bold mb-4 text-[#0F172A]">
-                Tools & Others
+                {t("technical.other")}
               </h4>
               <div className="space-y-4">
                 {skills.other.map((skill, index) => (

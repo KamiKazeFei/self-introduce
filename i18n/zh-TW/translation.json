@@ -39,6 +39,12 @@
       "description": "我熱衷於追蹤當前的技術趨勢與開發進展。\n像是關注 Angular、TypeScript 的版本更新，或是探索 AI 的新應用方式，已成為我日常生活的一部分。"
     }
   },
+  "technical": {
+    "title": "技術能力",
+    "frontend": "前端",
+    "back": "後端",
+    "other": "工具/其他"
+  },
   "projects": {
     "title": "專案經歷",
     "1": {

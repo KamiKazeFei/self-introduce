@@ -39,6 +39,12 @@
             "description": "I enjoy keeping up with current technology trends and development progress. \nStaying updated on things like Angular and TypeScript version changes, \nor exploring new ways to use AI, has become a part of my daily routine."
         }
     },
+    "technical": {
+        "title": "Technical Skills",
+        "frontend": "Frontend",
+        "back": "Backend",
+        "other": "Tools & Others"
+    },
     "projects": {
         "title": "Projects",
         "1": {
