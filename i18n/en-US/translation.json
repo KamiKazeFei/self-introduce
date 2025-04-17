@@ -1,0 +1,95 @@
+{
+    "about": "About Me",
+    "navbar": {
+        "title": "Yuul's Profiles"
+    },
+    "selfIntroduce": {
+        "title": "Hello, I'm ",
+        "1": "I'm Yuul, a Full End Developer with over 4 years of experience in\nthe web application field. In addition to my expertise in frontend\ndevelopment, I am also keenly interested in exploring other\nprogramming languages such as Python, C# and Java.",
+        "2": "I aslo have experience with backend development, including\nframeworks like .NET, Spring Boot, and Django, I am also skilled\nin SQL, which supports my capability to work across both frontend\nand backend development.",
+        "3": "Currently, I am working on a new project focused on a vehicle\nrenting system. This role has exposed me to various workflows and\ndevelopment methodologies. I am grateful for the opportunity to\ncollaborate with such professional colleagues, as it has\nsignificantly contributed to my personal and professional growth."
+    },
+    "workExperience": {
+        "title": "Work Experience",
+        "1": {
+            "company": "HIWIN Technologies Corp.",
+            "position": "Web Application Developer",
+            "period": "Jan 2021 - Feb 2024 · 3 yrs 2 mos",
+            "description": "As a Full-stack engineer, my responsibilities include planning architecture, UI/UX design, SQL, RESTful API design, and using GitLab as version control."
+        },
+        "2": {
+            "company": "Elitech Corporation",
+            "position": "Web Application Developer",
+            "period": "Feb 2024 - Present · 1 yr 3 mos",
+            "description": "I work as an assistant at IBM Consulting Company, and participate in the development of project.\n The ratio of front-end and back-end is 70:30."
+        }
+    },
+    "expertise": {
+        "title": "Special Expertise",
+        "1": {
+            "title": "Language Specialist",
+            "description": "Despite rarely studying proactively, I have acquired listening and speaking skills in both Japanese and English through films and television shows.\nI can engage in daily conversations with native speakers and understand approximately 70% of foreign language content."
+        },
+        "2": {
+            "title": "Programming language learning ability",
+            "description": " During my time at Hiwin Technologies,\nI began project development just two months after starting to learn web technologies and JavaScript,\ndespite having no prior experience.\nAdditionally, in both of my previous jobs, \nI was able to understand backend development and architecture through self-exploration and observing others. \nI then proceeded to take part in backend development, all within a short span of one to two months."
+        },
+        "3": {
+            "title": "Technical research",
+            "description": "I enjoy keeping up with current technology trends and development progress. \nStaying updated on things like Angular and TypeScript version changes, \nor exploring new ways to use AI, has become a part of my daily routine."
+        }
+    },
+    "projects": {
+        "title": "Projects",
+        "1": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "2": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "3": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "4": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "5": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "6": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "7": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "8": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "9": {
+            "title": "",
+            "date": "",
+            "description": ""
+        },
+        "10": {
+            "title": "",
+            "date": "",
+            "description": ""
+        }
+    }
+}

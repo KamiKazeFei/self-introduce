@@ -1,5 +1,4 @@
 "use client";
-
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import {
@@ -10,6 +9,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import i18n from "@/i18n/i18n";
 import AOS from "aos";
 import {
   Award,
@@ -19,12 +19,14 @@ import {
   Code,
   ExternalLink,
   Linkedin,
-  Mail,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Portfolio() {
+  const { t } = useTranslation();
+
   // Initialize AOS
   useEffect(() => {
     AOS.init({
@@ -34,14 +36,21 @@ export default function Portfolio() {
     });
   }, []);
 
+  /**
+   * 切換語言
+   */
+  const switchLanguage = () => {
+    i18n.changeLanguage(i18n.language === "en" ? "zh" : "en");
+  };
+
   // Work experience data
   const workExperience = [
     {
       id: 1,
-      company: "HIWIN 上銀科技",
-      position: "Web Application Developer",
-      period: "Jan 2021 - Feb 2024 · 3 yrs 2 mos",
-      description: `As a Full-stack engineer, my responsibilities include planning architecture, UI/UX design, SQL, RESTful API design, and using GitLab as version control.`,
+      company: t("workExperience.1.company"),
+      position: t("workExperience.1.position"),
+      period: t("workExperience.1.period"),
+      description: t("workExperience.1.description"),
       technologies: [
         "TypeScript",
         "Angular",
@@ -53,10 +62,10 @@ export default function Portfolio() {
     },
     {
       id: 2,
-      company: "Elitech Corporation 億力科技",
-      position: "Web Application Developer",
-      period: "Feb 2024 - Present · 1 yr 3 mos",
-      description: `I work as an assistant at IBM Consulting Company, and participate in the development of project.\n The ratio of front-end and back-end is 70:30.`,
+      company: t("workExperience.2.company"),
+      position: t("workExperience.2.position"),
+      period: t("workExperience.2.period"),
+      description: t("workExperience.2.description"),
       technologies: [
         "TypeScript",
         "Angular",
@@ -91,33 +100,18 @@ export default function Portfolio() {
   // Special expertise
   const expertise = [
     {
-      title: "Language Specialist",
-      description: `
-        Despite rarely studying proactively, I have acquired listening and speaking skills in both Japanese and English through films and television shows. 
-        I can engage in daily conversations with native speakers and understand approximately 70% of foreign language content.
-        `,
+      title: t("expertise.1.title"),
+      description: t("expertise.1.description"),
       icon: <Award className="h-10 w-10" />,
     },
     {
-      title: "Programming language learning ability",
-      description: `
-        During my time at Hiwin Technologies,
-        I began project development just two months after starting to learn web technologies and JavaScript,
-        despite having no prior experience.
-        
-        Additionally, in both of my previous jobs, 
-        I was able to understand backend development and architecture through self-exploration and observing others. 
-        I then proceeded to take part in backend development, all within a short span of one to two months.
-        `,
+      title: t("expertise.2.title"),
+      description: t("expertise.2.description"),
       icon: <CheckCircle className="h-10 w-10" />,
     },
     {
-      title: "Technical research",
-      description: `
-        I enjoy keeping up with current technology trends and development progress. 
-        Staying updated on things like Angular and TypeScript version changes, 
-        or exploring new ways to use AI, has become a part of my daily routine.
-        `,
+      title: t("expertise.3.title"),
+      description: t("expertise.3.description"),
       icon: <Briefcase className="h-10 w-10" />,
     },
   ];
@@ -206,7 +200,9 @@ export default function Portfolio() {
       {/* Navigation Bar */}
       <header className="sticky top-0 z-10 border-b border-[#E2E8F0] bg-white/90 backdrop-blur-sm shadow-sm">
         <div className="container mx-auto flex h-16 items-center justify-between px-4">
-          <div className="text-xl font-bold text-[#0891B2]">My Portfolio</div>
+          <div className="text-xl font-bold text-[#0891B2]">
+            {t("navbar.title")}
+          </div>
           <div className="flex items-center gap-4">
             <Button
               variant="ghost"
@@ -223,6 +219,18 @@ export default function Portfolio() {
                 <Linkedin className="h-5 w-5" />
               </Link>
             </Button>
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={switchLanguage}
+              className="text-[#64748B] hover:bg-[#F1F5F9] hover:text-[#0891B2]"
+            >
+              {i18n.language === "en" ? (
+                <span className="text-sm">中文</span>
+              ) : (
+                <span className="text-sm">EN</span>
+              )}
+            </Button>
           </div>
         </div>
       </header>
@@ -232,12 +240,9 @@ export default function Portfolio() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl" data-aos="fade-up">
             <h1 className="mb-4 text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl text-[#0F172A]">
-              <span className="text-[#0891B2]">Hello, I'm</span> Yuul
+              <span className="text-[#0891B2]">{t("selfIntroduce.title")}</span>{" "}
+              Yuul
             </h1>
-            <p className="mb-8 text-xl text-[#475569]">
-              A passionate developer with expertise in building modern web
-              applications
-            </p>
           </div>
         </div>
       </section>
@@ -249,7 +254,7 @@ export default function Portfolio() {
             className="mb-12 text-center text-3xl font-bold text-[#0F172A]"
             data-aos="fade-up"
           >
-            About Me
+            {t("about")}
           </h2>
           <div
             className="mx-auto max-w-3xl rounded-lg bg-white p-6 shadow-md border border-[#E2E8F0]"
@@ -257,16 +262,15 @@ export default function Portfolio() {
             data-aos-delay="100"
           >
             <p className="mb-4 text-lg text-[#475569]">
-            I'm Yuul, a Full End Developer with over 4 years of experience in the web application field. 
-            In addition to my expertise in frontend development, I am also keenly interested in exploring other programming languages such as Python, C# and Java.
+              {t("selfIntroduce.1")}
             </p>
 
-            <p className="mb-4 text-lg text-[#475569]">                          
-            I aslo have experience with backend development, including frameworks like .NET, Spring Boot, and Django, I am also skilled in SQL, which supports my capability to work across both frontend and backend development.            
+            <p className="mb-4 text-lg text-[#475569]">
+              {t("selfIntroduce.2")}
             </p>
 
-            <p className="mb-4 text-lg text-[#475569]">                                      
-            Currently, I am working on a new project focused on a vehicle renting system. This role has exposed me to various workflows and development methodologies. I am grateful for the opportunity to collaborate with such professional colleagues, as it has significantly contributed to my personal and professional growth.
+            <p className="mb-4 text-lg text-[#475569]">
+              {t("selfIntroduce.3")}
             </p>
           </div>
         </div>
@@ -279,7 +283,7 @@ export default function Portfolio() {
             className="mb-12 lg:mb-16 text-center text-3xl lg:text-4xl font-bold text-[#0F172A]"
             data-aos="fade-up"
           >
-            Work Experience
+            {t("workExperience.title")}
           </h2>
           <div className="relative w-full max-w-7xl mx-auto">
             {/* Timeline line */}
@@ -361,7 +365,7 @@ export default function Portfolio() {
             className="mb-12 text-center text-3xl font-bold text-[#0F172A]"
             data-aos="fade-up"
           >
-            Special Expertise
+            {t("expertise.title")}
           </h2>
 
           {/* Expertise Cards */}
@@ -480,7 +484,7 @@ export default function Portfolio() {
             className="mb-12 text-center text-3xl font-bold text-[#0F172A]"
             data-aos="fade-up"
           >
-            My Projects
+            {t("projects.title")}
           </h2>
           <div className="space-y-12">
             {projects.map((project, index) => (
