@@ -120,38 +120,19 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: "E-Commerce Platform",
-      date: "Jan 2023 - Mar 2023",
-      description:
-        "A full-featured e-commerce platform with product management, cart functionality, and payment processing. The platform includes user authentication, product catalog, shopping cart, checkout process, payment integration, order management, and admin dashboard.",
-      technologies: [
-        "React",
-        "Node.js",
-        "MongoDB",
-        "Express",
-        "Redux",
-        "Stripe",
-        "AWS S3",
-        "JWT",
-      ],
+      title: t("projects.1.title"),
+      date: t("projects.1.date"),
+      description: t("projects.1.description"),
+      technologies: ["TypeScript", "CSS", "HTML", "Angular 11"],
       link: "#",
       image: "/placeholder.svg?height=300&width=600",
     },
     {
       id: 2,
-      title: "Task Management App",
-      date: "Apr 2023 - Jun 2023",
-      description:
-        "A collaborative task management application with real-time updates and team collaboration features. Users can create projects, assign tasks, set deadlines, track progress, share files, and communicate through an integrated chat system. The app includes notifications, reminders, and detailed analytics.",
-      technologies: [
-        "React",
-        "Firebase",
-        "Tailwind CSS",
-        "Redux",
-        "Socket.io",
-        "Chart.js",
-        "Framer Motion",
-      ],
+      title: t("projects.2.title"),
+      date: t("projects.2.date"),
+      description: t("projects.2.description"),
+      technologies: ["TypeScript", "CSS", "HTML", "Angular 11"],
       link: "#",
       image: "/placeholder.svg?height=300&width=600",
     },
@@ -497,21 +478,10 @@ export default function Portfolio() {
                 data-aos-delay={index * 100}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-0">
-                  <div className="lg:col-span-4 h-full">
-                    <div className="h-full relative">
-                      <div className="w-full h-64 lg:h-full bg-[#F1F5F9] overflow-hidden">
-                        <img
-                          src={project.image || "/placeholder.svg"}
-                          alt={project.title}
-                          className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                  <div className="lg:col-span-8">
+                  <div className="col-span-12">
                     <CardHeader>
                       <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-2">
-                        <CardTitle className="text-2xl text-[#0891B2]">
+                        <CardTitle className="text-3xl text-[#0891B2]">
                           {project.title}
                         </CardTitle>
                         <div className="flex items-center text-[#64748B] text-sm">
@@ -519,7 +489,10 @@ export default function Portfolio() {
                           <span>{project.date}</span>
                         </div>
                       </div>
-                      <CardDescription className="text-[#475569] mt-2">
+                      <CardDescription
+                        className="text-[#475569] mt-2 text-md"
+                        style={{ whiteSpace: "pre-line" }}
+                      >
                         {project.description}
                       </CardDescription>
                     </CardHeader>
@@ -539,7 +512,7 @@ export default function Portfolio() {
                       </div>
                     </CardContent>
                     <CardFooter>
-                      <Button
+                      {/* <Button
                         className="bg-[#0891B2] hover:bg-[#0E7490] text-white"
                         asChild
                       >
@@ -549,7 +522,7 @@ export default function Portfolio() {
                         >
                           View Project <ExternalLink className="h-4 w-4" />
                         </Link>
-                      </Button>
+                      </Button> */}
                     </CardFooter>
                   </div>
                 </div>
